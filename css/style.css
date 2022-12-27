@@ -8,7 +8,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background-color: rgba(220, 220, 220, 0.100);
 }
 
@@ -163,7 +163,7 @@ body{
     color: #707070;
 }
 
-.how-can-help  {
+.how-can-help {
     display: flex;
     flex-direction: column;
     justify-content: center;
