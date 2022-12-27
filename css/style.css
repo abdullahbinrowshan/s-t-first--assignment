@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Roboto&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
     font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgba(220, 220, 220, 0.100);
 }
 
 .banner {
@@ -41,15 +46,17 @@
 }
 
 .btn>a {
+    text-decoration: none;
     letter-spacing: 1.5px;
     color: white;
 }
 
-.donate-today {
-    margin: 100px 0;
+.flex-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 25px;
+    margin: 120px 0;
 }
 
 .amnt-head-sctn {
@@ -58,12 +65,22 @@
     margin-bottom: 40px;
 }
 
-.amnt-head-sctn>h1,
-.donate-plan-head>h1 {
+.section-head {
+    max-width: 700px;
+    margin: auto;
+}
+
+.section-head>h1 {
     color: black;
     font-weight: 700;
     font-size: 45px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-head p {
+    text-align: center;
+    line-height: 30px;
     margin-bottom: 20px;
 }
 
@@ -82,7 +99,7 @@
     border: none;
     width: 125px;
     height: 113px;
-    background: #FAFAFA;
+    background: rgba(79, 157, 166, 0.1);
     color: #707070;
     border-radius: 5px;
 }
@@ -93,27 +110,19 @@
 }
 
 #other-amount-input {
-    border: 1px solid rgba(128, 128, 128, 0.353);
+    border: 2px solid rgb(79, 157, 166);
     border-style: none none solid;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     text-align: center;
+    background-color: rgba(220, 220, 220, 0.100);
     color: #B3B3B3;
     min-width: 700px;
-    margin-bottom: 20px;
-}
-
-.donate-plan {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    margin: 120px 0;
 }
 
 .plan-box:first-child {
-    background: rgba(79, 157, 166, 0.1);
+    background: rgba(79, 157, 166, 0.2);
 }
 
 .plan-box:nth-child(2) {
@@ -121,7 +130,7 @@
 }
 
 .plan-box:last-child {
-    background: rgba(232, 232, 88, 0.2);
+    background: rgba(232, 232, 88, 0.3);
 }
 
 .plan-box {
@@ -154,16 +163,120 @@
     color: #707070;
 }
 
-.the-footer {
+.how-can-help  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.how-can-help div:nth-child(1n+2) {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin-bottom: 5px;
+}
+
+.how-can-help>div>.how-help-bg {
+    background-image: url(../photos/hands-world-map.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60%;
+}
+
+#palestinian-boy {
+    background-image: url(../photos/Palestinian-boy.webp);
+}
+
+.how-help-bg>div {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.564);
     width: 100%;
+    margin-top: 40px;
+    height: 420px;
+}
+
+.how-help-bg button {
+    border: black solid 5px;
+    padding: 12px 24px 40px;
+    background-color: rgba(0, 0, 0, 0);
+    min-width: 110px;
+    height: 16px;
+    transition: 0.5s;
+}
+
+.how-help-bg button:hover {
+    transform: scale(1.1);
+}
+
+.how-help-bg button>a {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+.how-can-help .be-proud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    min-width: 500px;
+    background: rgb(0, 0, 0);
+    color: white;
+    word-wrap: break-word;
+}
+
+.be-proud>h3 {
+    font-family: sans-serif;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.be-proud p {
+    color: rgb(156, 156, 156);
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.get-update-main {
+    width: 809px;
     height: 200px;
+    background: rgba(79, 157, 166, 0.2);
+}
+
+.get-update-main>form {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.get-update-main>form>input {
+    font-size: 18px;
+    width: 255px;
+    height: 33px;
+    padding: 7px 20px;
+    border: none;
+}
+
+.search-btn {
+    width: 157px;
+    height: 48px;
+    border-radius: 0 5px 5px 0;
+}
+
+.the-footer {
+    width: 100%;
+    height: 170px;
     background-color: black;
     font-family: monospace;
     font-weight: 200;
     color: rgb(154, 154, 154);
+    padding-top: 60px;
 }
 
 .the-footer div {
@@ -175,6 +288,6 @@
 
 .the-footer>div h1 {
     font-size: 40px;
-    font-family: cursive;
-    color: rgb(83, 91, 255);
+    font-family: 'Lobster Two', cursive;
+    color: rgba(79, 157, 166, 0.777);
 }
